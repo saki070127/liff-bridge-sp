@@ -14,12 +14,9 @@
     const GAS_URL = 'https://script.google.com/macros/s/AKfycby6m4MKjMIydzzv7qQ29o3-3-SHw8dNawMXtJcaci830z-gRk8eJ02xY9Ik2H5WKHu5oA/exec';
 
     function goToForm(params) {
-      const query = params ? '?' + params : '';
-      document.querySelector('p').textContent = '飛び先: ' + GAS_URL + query;
-      setTimeout(function() {
-        window.location.replace(GAS_URL + query);
-      }, 3000);
-    }
+  const query = params ? '?' + params : '';
+  window.location.replace(GAS_URL + query);
+}
 
     liff.init({ liffId: '2010368974-D2YA42Hn' })
       .then(function() {
